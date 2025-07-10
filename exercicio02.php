@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <form method="post" action="">
+    <form method="POST" action="">
         <label for="numero">Digite um número:</label>
         <input type="number" name="numero" id="numero" required>
         <input type="submit" value="Calcular">

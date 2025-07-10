@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <form method="post" action="">
+    <form method="POST" action="">
         <label for="numero">Digite um número:</label>
         <input type="number" name="numero" id="numero" required>
         <input type="submit" value="Verificar">
@@ -17,12 +17,10 @@
         $numero = $_POST["numero"];
 
         if ($numero > 0) {
-            echo "<p>O número $numero é Positivo.</p>";
+            echo "<p>$numero é Positivo.</p>";
         } elseif ($numero < 0) {
-            echo "<p>O número $numero é Negativo.</p>";
-        } else {
-            echo "<p>O número é Zero.</p>";
-        }
+            echo "<p>$numero é Negativo.</p>";
+        } 
     }
     ?>
 
