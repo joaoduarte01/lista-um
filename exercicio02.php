@@ -2,25 +2,28 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Par ou Ímpar</title>
+    <title>Tabuada</title>
 </head>
 <body>
 
     <form method="post" action="">
         <label for="numero">Digite um número:</label>
         <input type="number" name="numero" id="numero" required>
-        <input type="submit" value="Verificar">
+        <input type="submit" value="Calcular">
     </form>
+
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $numero = $_POST["numero"];
 
-        if ($numero % 2 == 0) {
-            echo "<p>$numero é Par.</p>";
-        } else {
-            echo "<p>$numero é Ímpar.</p>";
+        echo "<h3>Tabuada do $numero:</h3>";
+
+        for ($i = 1; $i <= 10; $i++) {
+            $resultado = $numero * $i;
+            echo "$numero x $i = $resultado<br>";
         }
     }
     ?>
+
 </body>
 </html>
